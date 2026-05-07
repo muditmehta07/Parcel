@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="ParcelWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">Parcel</property>
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="primary">True</property>
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar-policy">never</property>
+            <child>
+              <object class="AdwClamp">
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">18</property>
+                    <property name="margin-top">24</property>
+                    <property name="margin-bottom">24</property>
+                    <property name="margin-start">12</property>
+                    <property name="margin-end">12</property>
+                    <child>
+                      <object class="AdwStatusPage">
+                        <property name="title" translatable="yes">Network Shares</property>
+                        <property name="description" translatable="yes">Manage your Samba configuration</property>
+                        <property name="icon-name">folder-remote-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkListBox" id="shares_list">
+                        <style>
+                          <class name="boxed-list"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_About Parcel</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

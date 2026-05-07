@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=io.github.muditmehta07.Parcel
+Exec=@bindir@/parcel --gapplication-service

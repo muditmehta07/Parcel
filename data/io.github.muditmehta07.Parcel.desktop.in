@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Parcel
+Exec=parcel
+Icon=io.github.muditmehta07.Parcel
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true
